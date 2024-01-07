@@ -2,4 +2,15 @@
 plugins {
     id("com.android.application") version "8.1.3" apply false
     id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin") version "2.0.1" apply false
+//    kotlin("jvm") version "1.9.22"
+//    kotlin("plugin.serialization") version "1.9.22"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22" apply false
+    id("androidx.navigation.safeargs.kotlin") version "2.5.3" apply false
 }
+
+//buildscript {
+//    dependencies {
+//        classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
+//    }
+//}
