@@ -91,4 +91,7 @@ dependencies {
 
     // Paging
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
+
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
 }
