@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -20,7 +21,7 @@ class FavoriteFragment : Fragment() {
     private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var bookSearchViewModel: BookSearchViewModel
+    private val bookSearchViewModel: BookSearchViewModel by activityViewModels()
     private lateinit var bookSearchAdapter: BookSearchAdapter
 
     override fun onCreateView(
@@ -38,7 +39,7 @@ class FavoriteFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        bookSearchViewModel = (activity as MainActivity).bookSearchViewModel
+//        bookSearchViewModel = (activity as MainActivity).bookSearchViewModel
 
         setupRecyclerView()
         setupTouchHelper(view)

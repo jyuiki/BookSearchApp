@@ -1,7 +1,7 @@
 package com.example.booksearchapp.ui.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -22,7 +22,26 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    lateinit var bookSearchViewModel: BookSearchViewModel
+    private lateinit var bookSearchViewModel: BookSearchViewModel
+
+    // Error
+//    private val bookSearchViewModel: BookSearchViewModel by lazy {
+//        val database = BookSearchDatabase.getInstance(this)
+//        val bookSearchRepository = BookSearchRepositoryImpl(database)
+//        ViewModelProvider(this@MainActivity, object : AbstractSavedStateViewModelFactory(this@MainActivity, null) {
+//            override fun <T : ViewModel> create(
+//                key: String,
+//                modelClass: Class<T>,
+//                handle: SavedStateHandle
+//            ): T {
+//                if (modelClass.isAssignableFrom(BookSearchViewModel::class.java)) {
+//                    return BookSearchViewModel(bookSearchRepository, handle) as T
+//                }
+//                throw IllegalArgumentException("ViewModel class not found")
+//            }
+//        })[BookSearchViewModel::class.java]
+//    }
+
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
