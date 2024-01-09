@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.booksearchapp.data.model.Book
 import com.example.booksearchapp.databinding.ItemBookPreviewBinding
-import com.example.booksearchapp.ui.viewmodel.BookSearchViewModel
 
 class BookSearchAdapter : ListAdapter<Book, BookSearchViewHolder>(BookDiffCallback) {
 
